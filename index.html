@@ -1,44 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>IP Address Tracker</title>
 
-    <title>Frontend Mentor | IP Address Tracker</title>
+  <!-- Website favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
 
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+  <!-- JavaScript file -->
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
+  <main>
+    <!-- Header and search section -->
+    <header class="header">
+      <h1>IP Address Tracker</h1>
 
-    IP Address Tracker
+      <form id="search-form">
+        <label for="ip-input" class="sr-only">
+          Enter an IP address or domain
+        </label>
 
-    Search for any IP address or domain
+        <input
+          type="text"
+          id="ip-input"
+          placeholder="Search for any IP address or domain"
+          autocomplete="off"
+          required
+        >
 
-    IP Address
-    Location
-    Timezone
-    UTC <!-- add offset value dynamically using the API -->
-    ISP
+        <button type="submit" aria-label="Search IP address">
+          <img src="./images/icon-arrow.svg" alt="">
+        </button>
+      </form>
+    </header>
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <!-- IP address information -->
+    <section class="info-panel" aria-label="IP address information">
+
+      <div class="info-item">
+        <h2>IP Address</h2>
+        <p id="ip-address">--</p>
+      </div>
+
+      <div class="info-item">
+        <h2>Location</h2>
+        <p id="location">--</p>
+      </div>
+
+      <div class="info-item">
+        <h2>Timezone</h2>
+        <p id="timezone">--</p>
+      </div>
+
+      <div class="info-item">
+        <h2>ISP</h2>
+        <p id="isp">--</p>
+      </div>
+    </section>
+
+    <!-- Interactive map -->
+    <section id="map" aria-label="IP address location map"></section>
+  </main>
 </body>
-
 </html>
