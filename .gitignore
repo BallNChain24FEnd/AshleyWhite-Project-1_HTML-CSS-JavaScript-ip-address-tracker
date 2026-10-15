@@ -1,0 +1,5 @@
+# Local API configuration kept out of Git
+keys.js
+
+# macOS system files
+.DS_Store
