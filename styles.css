@@ -108,3 +108,7 @@ body {
   background-color: #e5e5e5;
 }
 
+/* Add lines between the information fields */
+.info-item:not(:last-child) {
+  border-right: 1px solid lightgray;
+}
