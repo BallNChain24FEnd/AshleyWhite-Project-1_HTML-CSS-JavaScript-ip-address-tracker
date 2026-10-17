@@ -4,33 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>IP Address Tracker</title>
 
-  <!-- Website favicon -->
-  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+  <!-- Website icon -->
+  <link rel="icon" href="./images/favicon-32x32.png">
 
-  <!-- External CSS stylesheet -->
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyo4uuDa0hJ0gU="
+    crossorigin="">
+
+  <!-- Project CSS -->
   <link rel="stylesheet" href="./styles.css">
 
-  <!-- JavaScript file -->
-  <script src="./script.js" defer></script>
+  <!-- Leaflet JS -->
+  <script defer
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <!-- Project JS -->
+  <script defer src="./script.js"></script>
 </head>
 
 <body>
   <main>
-    <!-- Header and search section -->
+    <!-- Header -->
     <header class="header">
       <h1>IP Address Tracker</h1>
 
+      <!-- Search form -->
       <form id="search-form">
         <label for="ip-input" class="sr-only">
           Enter an IP address or domain
         </label>
 
         <input
-          type="text"
           id="ip-input"
+          type="text"
           placeholder="Search for any IP address or domain"
           autocomplete="off"
           required
@@ -40,11 +52,11 @@
           <img src="./images/icon-arrow.svg" alt="">
         </button>
       </form>
+      <p id="error-message" role="alert"></p>
     </header>
 
-    <!-- IP address information -->
+    <!-- Information card -->
     <section class="info-panel" aria-label="IP address information">
-
       <div class="info-item">
         <h2>IP Address</h2>
         <p id="ip-address">--</p>
@@ -67,7 +79,7 @@
     </section>
 
     <!-- Interactive map -->
-    <section id="map" aria-label="IP address location map"></section>
+    <section id="map" aria-label="IP location map"></section>
   </main>
 </body>
 </html>
