@@ -77,3 +77,26 @@ body {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* Style each information field */
+.info-item {
+  flex: 1;
+  padding: 0 15px;
+}
+
+/* Style the information labels */
+.info-item h2 {
+  color: hsl(0, 0%, 59%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Style the information values */
+.info-item p {
+  color: hsl(0, 0%, 17%);
+  font-size: 24px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
