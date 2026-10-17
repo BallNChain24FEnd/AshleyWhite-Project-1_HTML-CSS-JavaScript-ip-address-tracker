@@ -1,0 +1,79 @@
+/* Import the Rubik font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Style the purple header and title */
+.header {
+  background: url("./images/pattern-bg-desktop.png") center/cover;
+  height: 280px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* Center the search bar using Flexbox */
+#search-form {
+  display: flex;
+  max-width: 555px;
+  margin: auto;
+  height: 58px;
+}
+
+#ip-input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+}
+
+/* Style the search button and hover effect */
+#search-form button {
+  width: 58px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background: #2b2b2b;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background: #555;
+}
+
+/* Create the white information panel using Flexbox */
+.info-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  max-width: 1110px;
+  margin: -55px auto 0; /* Moves panel over the header */
+  padding: 35px;
+  border-radius: 15px;
+  position: relative;
+}
+
+/* Hide the label visually but keep it accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
