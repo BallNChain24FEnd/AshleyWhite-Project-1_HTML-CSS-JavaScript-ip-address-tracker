@@ -100,3 +100,11 @@ body {
   font-weight: 500;
   overflow-wrap: anywhere;
 }
+
+/* Prepare the map container for Leaflet */
+#map {
+  height: 500px;
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
