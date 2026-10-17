@@ -89,13 +89,16 @@ main {
   width: 90%;
   max-width: 1110px;
   min-height: 160px;
-  margin: -55px auto 0;
+  margin: 0;
   padding: 30px;
   border-radius: 15px;
   background: white;
-  position: relative;
+  position: absolute;
   z-index: 1000;
   box-shadow: 0 5px 20px #00000015;
+  top: 225px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .info-item {
@@ -123,13 +126,16 @@ main {
   overflow-wrap: anywhere;
 }
 
-/* Full-width map */
+/* Keep map inside its own area */
 #map {
+  position: absolute;
+  top: 280px;
+  left: 0;
   width: 100%;
   height: calc(100vh - 280px);
   min-height: 500px;
-  margin-top: -105px;
-  position: relative;
+  margin: 0;
+  overflow: hidden;
   z-index: 1;
   background: #e5e5e5;
 }
@@ -153,6 +159,9 @@ main {
     padding: 25px;
     gap: 20px;
     text-align: center;
+    top: 230px;
+    left: 50%;
+    margin: 0;
   }
 
   .info-item {
@@ -167,8 +176,10 @@ main {
     font-size: 20px;
   }
 
-  #map {
+  #/* Mobile map */
+    #map {
+    top: 300px;
     height: calc(100vh - 300px);
-    margin-top: -220px;
-  }
+    margin: 0;
+}
 }

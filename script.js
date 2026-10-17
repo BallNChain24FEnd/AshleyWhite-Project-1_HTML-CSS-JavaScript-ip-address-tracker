@@ -10,7 +10,16 @@ let map;
 let marker;
 
 if (typeof L !== "undefined") {
-  map = L.map("map").setView([39.8, -98.6], 4);
+  // Create a stationary map
+map = L.map("map", {
+  dragging: false,
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  touchZoom: false,
+  boxZoom: false,
+  keyboard: false,
+  zoomControl: false
+}).setView([39.8, -98.6], 4);
 
   // Add map tiles
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
