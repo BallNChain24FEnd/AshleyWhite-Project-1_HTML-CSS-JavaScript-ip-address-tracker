@@ -1,18 +1,28 @@
-/* Commit 8: Make the search bar work */
+/* Commit 9: Check user's search */
 
-// Find the search form and input box in HTML
+// Find form and input box
 const searchForm = document.getElementById("search-form");
 const ipInput = document.getElementById("ip-input");
 
-// Wait for the user to submit the search
+// Wait for user to search
 searchForm.addEventListener("submit", function(event) {
-
-  // Stop the page from refreshing
   event.preventDefault();
 
-  // Get what the user typed and remove extra spaces
+  // Get input and remove extra spaces
   const ipAddress = ipInput.value.trim();
 
-  // Show what the user searched for in the console
+  // Check if the search box is empty
+  if (ipAddress === "") {
+    alert("Please enter an IP address or domain.");
+    return;
+  }
+
+  // Check for spaces inside the search
+  if (ipAddress.includes(" ")) {
+    alert("Please enter a valid IP address or domain.");
+    return;
+  }
+
+  // Show the search in the console
   console.log("Searching for:", ipAddress);
 });
