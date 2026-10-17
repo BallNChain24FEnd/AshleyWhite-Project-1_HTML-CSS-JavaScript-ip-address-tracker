@@ -1,5 +1,10 @@
-# Local API configuration kept out of Git
+# Private API files
 keys.js
+.env
+.env.local
 
-# macOS system files
+# Vercel settings
+.vercel
+
+# macOS files
 .DS_Store
